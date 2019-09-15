@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ 
+    <link href="libs/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="libs/dat.gui.css" rel="stylesheet" type="text/css">
+    <style>
+      #controls{
+         position:fixed;
+         top:0;
+         right:20px;
+      }
+      #plot{
+         height:90%;
+         
+      }
+     
+
+    </style>
+  </head>
+  <body>
+
+
+     <div class = "container-fluid">
+      <div class = "row h-25 align-items-left">
+          <div  class="col-3">
+             <select  id="select" class="custom-select ml-5 mt-3" >
+                  <option selected value="LotkaVolterra">Lotka-Volterra</option>
+                  <option value="Sin">Sin</option>
+              </select>
+          </div>
+      </div>
+      <div class = "row h-75" >
+          <div class="col-12 h-100 ">
+             <div id="plot" class="  " ></div>
+          </div> 
+          <div id="controls" class=""></div>       
+      </div>
+     </div>
+
+     <script src="libs/plotly.js"></script>
+     <script src="libs/dat.gui.js"></script>
+     <script src="src/InteractivePlot.js"></script>
+     <script src="src/Plots.js"></script>
+     <script src="src/index.js"></script>
+
+  </body>
+</html>
