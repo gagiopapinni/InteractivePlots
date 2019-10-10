@@ -1,10 +1,5 @@
-const selector = document.getElementById("select");
+import { App } from "./App.js"
 
-let currentPlot = Plots[selector.value]();
 
-selector.addEventListener("change",(e)=>{
-      currentPlot.destroy();
-      currentPlot = Plots[e.target.value]();
-
-})
+ReactDOM.render(<App />,document.getElementById("root"))
 

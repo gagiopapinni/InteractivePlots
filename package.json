@@ -1,0 +1,31 @@
+{
+  "name": "interactive-plots",
+  "version": "1.0.0",
+  "description": "A handy way of exploring plots. That's it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gagiopapinni/InteractivePlots.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gagiopapinni/InteractivePlots/issues"
+  },
+  "homepage": "https://github.com/gagiopapinni/InteractivePlots#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  }
+}
