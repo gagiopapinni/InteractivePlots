@@ -1,3 +1,5 @@
+import React from "react"
+import * as dat from 'dat.gui';
 
 export class Controller extends React.Component {
   

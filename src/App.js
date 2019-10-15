@@ -1,6 +1,8 @@
+import React from "react"
 import { PredefinedPlots } from "./PredefinedPlots"
 import { Controller } from "./Controller"
 import { Plot } from "./Plot"
+import { Container, Row, Col, Button, ButtonGroup } from "react-bootstrap"
 
 export class App extends React.Component {
    constructor(props){
@@ -23,27 +25,28 @@ export class App extends React.Component {
    }
    render(){
      return (
-      <div className="container-fluid">
-        <div className="row align-items-left mt-5">
-           <div className="btn-group " role="group">
-             <select  
+      <Container fluid>
+        <Row className="align-items-left mt-5">
+            <ButtonGroup>
+               <select  
                   className="custom-select btn-outline-secondary ml-5" 
                   selected={this.state.currentPlot} 
                   onChange={this.onSelectChange}
-             >
+               >
                   <option value="LotkaVolterra">Lotka-Volterra</option>
                   <option value="Sin">Sin</option>
-             </select>
-             <div className="btn btn-outline-secondary"
+               </select>
+               <Button variant="outline-secondary"
                   onMouseDown={()=>alert("implement me!")} 
-             > +Add </div>
-            </div>
+               > +Add </Button>
+            </ButtonGroup>
+
             <div className=" ml-3">
-               <button className="btn btn-outline-secondary dropdown-toggle" 
+               <Button variant="outline-secondary dropdown-toggle" 
                     onMouseDown={()=>{this.setState({showController:!this.state.showController})}}
                   > 
                    Parameters
-               </button>
+               </Button>
                <Controller
                          className="mt-2"
                          key={this.state.currentPlot.title}
@@ -53,18 +56,18 @@ export class App extends React.Component {
                         
                />
             </div> 
-                 
+        </Row>
 
-        </div>
-        <div className = "row h-100" >
-          <div className="col-12 h-100">
+        <Row className="h-100" >
+          <Col className="h-100" xs="12">
             <Plot
                   style={ {height:"90%"} } 
                   { ...this.state.currentPlot } 
             />
-          </div>
-        </div>
-      </div> );
+          </Col>
+        </Row>
+
+      </Container> );
 
    }
 
